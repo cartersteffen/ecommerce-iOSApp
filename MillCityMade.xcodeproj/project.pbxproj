@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8D88F9AF2116B974002E83DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F9AE2116B974002E83DB /* AppDelegate.swift */; };
-		8D88F9B12116B974002E83DB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F9B02116B974002E83DB /* FirstViewController.swift */; };
 		8D88F9B32116B974002E83DB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F9B22116B974002E83DB /* SecondViewController.swift */; };
 		8D88F9B62116B974002E83DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D88F9B42116B974002E83DB /* Main.storyboard */; };
 		8D88F9B82116B975002E83DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D88F9B72116B975002E83DB /* Assets.xcassets */; };
 		8D88F9BB2116B975002E83DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D88F9B92116B975002E83DB /* LaunchScreen.storyboard */; };
 		8D88F9C62116B975002E83DB /* MillCityMadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F9C52116B975002E83DB /* MillCityMadeTests.swift */; };
 		8D88F9D12116B975002E83DB /* MillCityMadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F9D02116B975002E83DB /* MillCityMadeUITests.swift */; };
+		8DC91C89211B7EA20096185A /* HatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC91C88211B7EA20096185A /* HatCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		8D88F9AB2116B974002E83DB /* MillCityMade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MillCityMade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D88F9AE2116B974002E83DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D88F9B02116B974002E83DB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		8D88F9B22116B974002E83DB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8D88F9B52116B974002E83DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D88F9B72116B975002E83DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		8D88F9CC2116B975002E83DB /* MillCityMadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MillCityMadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D88F9D02116B975002E83DB /* MillCityMadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillCityMadeUITests.swift; sourceTree = "<group>"; };
 		8D88F9D22116B975002E83DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC91C88211B7EA20096185A /* HatCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				8D88F9AE2116B974002E83DB /* AppDelegate.swift */,
-				8D88F9B02116B974002E83DB /* FirstViewController.swift */,
 				8D88F9B22116B974002E83DB /* SecondViewController.swift */,
 				8D88F9B42116B974002E83DB /* Main.storyboard */,
+				8DC91C88211B7EA20096185A /* HatCollectionViewController.swift */,
 				8D88F9B72116B975002E83DB /* Assets.xcassets */,
 				8D88F9B92116B975002E83DB /* LaunchScreen.storyboard */,
 				8D88F9BC2116B975002E83DB /* Info.plist */,
@@ -259,9 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC91C89211B7EA20096185A /* HatCollectionViewController.swift in Sources */,
 				8D88F9B32116B974002E83DB /* SecondViewController.swift in Sources */,
 				8D88F9AF2116B974002E83DB /* AppDelegate.swift in Sources */,
-				8D88F9B12116B974002E83DB /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
