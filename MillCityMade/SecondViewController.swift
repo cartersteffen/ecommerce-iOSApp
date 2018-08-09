@@ -23,6 +23,7 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func onClickButton(_ sender: UIButton) {
         sendEmail(body: emailBody.text!)
     }
@@ -30,7 +31,7 @@ class SecondViewController: UIViewController {
     func sendEmail(body:String) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
+            mail.mailComposeDelegate = (self as! MFMailComposeViewControllerDelegate)
             mail.setToRecipients(["cartste3@gmail.com"])
             //mail.setMessageBody(?body<#String#>)
             mail.setMessageBody("\(body)", isHTML: false)
@@ -49,7 +50,7 @@ class SecondViewController: UIViewController {
 
     }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
 

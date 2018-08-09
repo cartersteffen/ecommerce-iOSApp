@@ -13,6 +13,9 @@ private let reuseIdentifier = "Cell"
 class HatCollectionViewController: UICollectionViewController {
     
     var cellColor = true
+    fileprivate let itemsPerRow: CGFloat = 1
+    fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,3 +109,33 @@ class HatCollectionViewController: UICollectionViewController {
     */
 
 }
+
+extension HatCollectionViewController : UICollectionViewDelegateFlowLayout {
+    //1
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //2
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        let heightPerItem = widthPerItem * 0.5
+        
+        return CGSize(width: widthPerItem, height: heightPerItem)
+    }
+    
+    //3
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    // 4
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
+}
+

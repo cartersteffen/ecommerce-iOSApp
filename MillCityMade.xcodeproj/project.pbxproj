@@ -14,6 +14,7 @@
 		8D88F9BB2116B975002E83DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D88F9B92116B975002E83DB /* LaunchScreen.storyboard */; };
 		8D88F9C62116B975002E83DB /* MillCityMadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F9C52116B975002E83DB /* MillCityMadeTests.swift */; };
 		8D88F9D12116B975002E83DB /* MillCityMadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F9D02116B975002E83DB /* MillCityMadeUITests.swift */; };
+		8DA927E3211C9090000AA65F /* HatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA927E2211C9090000AA65F /* HatCell.swift */; };
 		8DC91C89211B7EA20096185A /* HatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC91C88211B7EA20096185A /* HatCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		8D88F9CC2116B975002E83DB /* MillCityMadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MillCityMadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D88F9D02116B975002E83DB /* MillCityMadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillCityMadeUITests.swift; sourceTree = "<group>"; };
 		8D88F9D22116B975002E83DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DA927E2211C9090000AA65F /* HatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatCell.swift; sourceTree = "<group>"; };
 		8DC91C88211B7EA20096185A /* HatCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				8D88F9AE2116B974002E83DB /* AppDelegate.swift */,
 				8D88F9B22116B974002E83DB /* SecondViewController.swift */,
 				8D88F9B42116B974002E83DB /* Main.storyboard */,
+				8DA927E2211C9090000AA65F /* HatCell.swift */,
 				8DC91C88211B7EA20096185A /* HatCollectionViewController.swift */,
 				8D88F9B72116B975002E83DB /* Assets.xcassets */,
 				8D88F9B92116B975002E83DB /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				8DC91C89211B7EA20096185A /* HatCollectionViewController.swift in Sources */,
 				8D88F9B32116B974002E83DB /* SecondViewController.swift in Sources */,
+				8DA927E3211C9090000AA65F /* HatCell.swift in Sources */,
 				8D88F9AF2116B974002E83DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
