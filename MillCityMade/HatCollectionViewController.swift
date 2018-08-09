@@ -21,7 +21,7 @@ class HatCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         let image : UIImage = UIImage(named: "Mill_City_Made_Final_Logo.png")!
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
         self.navigationItem.titleView = imageView
@@ -33,7 +33,7 @@ class HatCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(HatCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -67,12 +67,17 @@ class HatCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HatCell
     
         // Configure the cell
         
-        cell.backgroundColor = cellColor ? UIColor.red : UIColor.blue
-        cellColor = !cellColor
+        //cell.backgroundColor = cellColor ? UIColor.red : UIColor.blue
+        //cellColor = !cellColor
+        let image = UIImage(named: "navy_hat.png")!
+        //let image = UIImage.init()
+        cell.imageView = UIImageView.init(image: image)
+        cell.price.text = "$21.99"
+        cell.productDescription.text = "Navy Minnesota Hat"
     
         return cell
     }
@@ -119,7 +124,7 @@ extension HatCollectionViewController : UICollectionViewDelegateFlowLayout {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
-        let heightPerItem = widthPerItem * 0.5
+        let heightPerItem = widthPerItem * 0.75
         
         return CGSize(width: widthPerItem, height: heightPerItem)
     }
