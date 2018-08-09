@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var emailBody: UITextField!
     
@@ -31,7 +31,7 @@ class SecondViewController: UIViewController {
     func sendEmail(body:String) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = (self as! MFMailComposeViewControllerDelegate)
+            mail.mailComposeDelegate = self
             mail.setToRecipients(["cartste3@gmail.com"])
             //mail.setMessageBody(?body<#String#>)
             mail.setMessageBody("\(body)", isHTML: false)
@@ -50,7 +50,7 @@ class SecondViewController: UIViewController {
 
     }
     
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
 

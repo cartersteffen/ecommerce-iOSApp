@@ -71,13 +71,13 @@ class HatCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         
-        //cell.backgroundColor = cellColor ? UIColor.red : UIColor.blue
+        cell.backgroundColor = cellColor ? UIColor.red : UIColor.blue
         //cellColor = !cellColor
         let image = UIImage(named: "navy_hat.png")!
         //let image = UIImage.init()
         cell.imageView = UIImageView.init(image: image)
-        cell.price.text = "$21.99"
-        cell.productDescription.text = "Navy Minnesota Hat"
+        //cell.price.text = "$21.99"
+        //cell.productDescription.text = "Navy Minnesota Hat"
     
         return cell
     }

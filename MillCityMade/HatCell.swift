@@ -9,9 +9,12 @@
 import UIKit
 
 class HatCell: UICollectionViewCell {
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var productDescription: UILabel!
+    
+    
     
     
 }

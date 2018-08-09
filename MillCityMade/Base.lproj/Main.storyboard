@@ -65,8 +65,8 @@
                                 <size key="customSize" width="400" height="300"/>
                                 <connections>
                                     <outlet property="imageView" destination="K0s-r5-2bd" id="v5I-C6-iYN"/>
-                                    <outlet property="price" destination="sZe-Jb-Qft" id="jMc-OS-VYe"/>
-                                    <outlet property="productDescription" destination="1Ag-vQ-MaD" id="pqm-cf-HWh"/>
+                                    <outlet property="price" destination="sZe-Jb-Qft" id="X1e-Ch-7PK"/>
+                                    <outlet property="productDescription" destination="1Ag-vQ-MaD" id="4uO-Ib-Eh6"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
