@@ -26,7 +26,7 @@ class HatCollectionViewController: UICollectionViewController {
         self.collectionView!.delegate = self
         
         //view.backgroundColor = .black
-        //collectionView?.backgroundColor = UIColor.lightGray
+        collectionView?.backgroundColor = UIColor.lightGray
     
         //navigationController?.navigationBar.barTintColor = UIColor.white
         let image : UIImage = UIImage(named: "Mill_City_Made_Final_Logo.png")!
@@ -81,7 +81,7 @@ class HatCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         
-        //cell.backgroundColor = cellColor ? UIColor.red : UIColor.blue
+        cell.backgroundColor = .white
         //cellColor = !cellColor
         let image: UIImage = UIImage(named: "navy_hat.png")!
         cell.imageView?.image = image
@@ -134,7 +134,7 @@ extension HatCollectionViewController : UICollectionViewDelegateFlowLayout {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
-        let heightPerItem = widthPerItem * 0.75
+        let heightPerItem = widthPerItem * 1.15
         
         return CGSize(width: widthPerItem, height: heightPerItem)
     }
