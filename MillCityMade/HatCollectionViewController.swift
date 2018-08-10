@@ -12,6 +12,8 @@ private let reuseIdentifier = "Cell"
 
 class HatCollectionViewController: UICollectionViewController {
     
+    //@IBOutlet var collectionView: UICollectionView!
+    
     var cellColor = true
     fileprivate let itemsPerRow: CGFloat = 1
     fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
@@ -19,6 +21,9 @@ class HatCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.collectionView!.dataSource = self
+        self.collectionView!.delegate = self
         
         //view.backgroundColor = .black
         //collectionView?.backgroundColor = UIColor.lightGray
@@ -30,14 +35,15 @@ class HatCollectionViewController: UICollectionViewController {
         imageView.image = image
         self.navigationItem.titleView = imageView
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        //self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
 
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(HatCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        //self.collectionView!.register(HatCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -71,14 +77,15 @@ class HatCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HatCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "singleCell", for: indexPath) as! HatCell
     
         // Configure the cell
         
         //cell.backgroundColor = cellColor ? UIColor.red : UIColor.blue
         //cellColor = !cellColor
-        let image = UIImage(named: "navy_hat.png")!
-        cell.imageView = UIImageView.init(image: image)
+        let image: UIImage = UIImage(named: "navy_hat.png")!
+        cell.imageView?.image = image
+        //cell.imageView = UIImageView.init(image: image)
         cell.price?.text = "$21.99"
         cell.productDescription?.text = "Navy Minnesota Hat"
     
