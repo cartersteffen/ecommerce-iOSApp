@@ -20,8 +20,12 @@ class HatCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //view.backgroundColor = .black
+        //collectionView?.backgroundColor = UIColor.lightGray
+    
+        //navigationController?.navigationBar.barTintColor = UIColor.white
         let image : UIImage = UIImage(named: "Mill_City_Made_Final_Logo.png")!
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
         self.navigationItem.titleView = imageView
@@ -71,13 +75,12 @@ class HatCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         
-        cell.backgroundColor = cellColor ? UIColor.red : UIColor.blue
+        //cell.backgroundColor = cellColor ? UIColor.red : UIColor.blue
         //cellColor = !cellColor
         let image = UIImage(named: "navy_hat.png")!
-        //let image = UIImage.init()
         cell.imageView = UIImageView.init(image: image)
-        //cell.price.text = "$21.99"
-        //cell.productDescription.text = "Navy Minnesota Hat"
+        cell.price?.text = "$21.99"
+        cell.productDescription?.text = "Navy Minnesota Hat"
     
         return cell
     }
